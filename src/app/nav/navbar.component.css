@@ -1,0 +1,11 @@
+nav{
+  background-color:  hsl(207, 26%, 17%)!important;
+  color: #ffffff!important;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  margin-bottom: 19px!important;
+}
+strong{
+  color: #ffffff!important;
+}
