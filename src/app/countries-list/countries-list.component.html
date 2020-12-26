@@ -1,17 +1,24 @@
 <br><br><br><br>
-  <form id="searchForm">
-    <div class="row form-group">
-      <div class="col-lg-9 col-sm-5 col-xs-4" >
-        <input type='text' [(ngModel)]="listSearch" name="listSearch"
-         class="form-control" placeholder="search by country" />
-      </div>
-      <div class="col-lg-2 col-sm-4 col-xs-3">
-        <select class="form-control" [(ngModel)]="regionFilter" name="regionFilter">
-          <option value="" *ngFor="let reg of regionOptions">{{reg}}</option>
-        </select>
-      </div>
+  <div class="row">
+    <div class="col-lg-9 col-sm-5 col-xs-4" >
+      <input type='text' [(ngModel)]="listSearch" name="listSearch"
+        class="form-control shadow" placeholder="Search By Country" />
     </div>
-  </form>
+    <div class="col-lg-2 col-sm-4 col-xs-3  mt-3 mt-md-auto dropdown shadow">
+      <div class="dropdown-label" (click)="toggleOption()">
+        <span>Filter by Region </span>
+        <i class="fa fa-chevron-down"></i>
+      </div>
+      <ul *ngIf="showOptions" class="dropdown-options">
+        <li (click)="performFilter(regionFilter='Africa')">Africa</li>
+        <li (click)="performFilter(regionFilter='Americas')">Americas</li>
+        <li (click)="performFilter(regionFilter='Asia')">Asia</li>
+        <li (click)="performFilter(regionFilter='Europe')">Europe</li>
+        <li (click)="performFilter(regionFilter='polar')"> Polar</li>
+      </ul>
+    </div>
+  </div>
+
 
   <main>
     <div class="card shadow" *ngFor= "let countryData of filteredCountry" [routerLink]="['/country', countryData.name]">

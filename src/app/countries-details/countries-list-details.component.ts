@@ -48,7 +48,7 @@ export class CountriesListDetailsComponent implements OnInit {
     return {
       'border-radius':'10px',
       'padding': '8px',
-      'margin': '0 5px',
+      'margin': '5px',
       'box-shadow': '1px 1px 1.5px black',
       'cursor':'pointer'
     }

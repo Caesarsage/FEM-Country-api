@@ -18,3 +18,45 @@ main{
 :host-context(.dark) .card{
   background-color: var(--d-bg);
 }
+:host-context(.light) .dropdown,
+:host-context(.light) .dropdown-options{
+  background-color: var(--l-element);
+}
+:host-context(.dark) .dropdown,
+:host-context(.dark) .dropdown-options{
+  background-color: var(--d-element);
+}
+
+/* DROPDOWN STYLLING */
+.dropdown{
+  position: relative;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 5px;
+}
+.dropdown-options{
+  list-style: none;
+  position: absolute;
+  z-index: 5;
+  top: 110%;
+  left: 0;
+  width: 100%
+}
+.dropdown-options li{
+  padding: 0.5rem;
+  cursor: pointer;
+}
+:host-context(.dark) input{
+  background-color: var(--d-element);
+  color: var(--d-text);
+}
+:host-context(.light) input{
+  background-color: var(--l-element);
+  color: var(--l-text);
+}
+.dropdown-label{
+  cursor: pointer;
+}
+.row input{
+  border: none;
+}
