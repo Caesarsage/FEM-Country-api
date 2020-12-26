@@ -9,7 +9,9 @@ import { Theme, ThemeService } from "../services/theme.service";
 })
 export class NavbarComponent implements OnInit {
   title:string = 'Where in the world?'
+
   theme: Observable<Theme>
+  themeTitle: boolean = true
 
   constructor(private themeService: ThemeService) { }
 
@@ -19,5 +21,6 @@ export class NavbarComponent implements OnInit {
 
   toggleTheme(){
     this.themeService.toggleMode();
+    this.themeTitle = !this.themeTitle
   }
 }

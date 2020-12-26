@@ -5,11 +5,19 @@
       </a>
     </div>
     <div (click)="toggleTheme()" class="col-md col-sm-12">
-      <strong>Dark Mode
+      <strong class="theme-swicher">
         <span>
           <i class="fa fa-moon-o"></i>
-          {{ ' ' }}
         </span>
+        {{ ' ' }}
+        <span *ngIf="themeTitle">
+          Light Mode
+        </span>
+        <span *ngIf="!themeTitle">
+          Dark Mode
+        </span>
+
+
       </strong>
     </div>
 </nav>

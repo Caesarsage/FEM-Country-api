@@ -16,3 +16,6 @@ nav{
 :host-context(.light) .navbar-brand{
   color: var(--l-text);
 }
+.theme-swicher{
+  cursor: pointer;
+}
