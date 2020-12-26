@@ -1,16 +1,14 @@
-<nav class="navbar row navbar-expand-lg navbar-light bg-white">
+<nav class="navbar row navbar-expand-lg shadow">
     <div class="col-md-10 col-sm-12">
-      <a href="" class="navbar-brand">
-        <strong> {{title}} <i class="fa fa-bomb"></i></strong>
+      <a href="/" class="navbar-brand">
+        <strong> {{title}} </strong>
       </a>
     </div>
-    <div class="col-md col-sm-12">
-      <strong (click)="toggleMode()">Dark Mode
-        <span *ngIf="toggle">
-            <i class="fa fa-lightbulb-o fa-lg"> </i>
-        </span>
-        <span *ngIf="">
-            <i class="fa fa-star-half-full fa-lg"></i>
+    <div (click)="toggleTheme()" class="col-md col-sm-12">
+      <strong>Dark Mode
+        <span>
+          <i class="fa fa-moon-o"></i>
+          {{ ' ' }}
         </span>
       </strong>
     </div>

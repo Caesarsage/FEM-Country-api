@@ -2,7 +2,7 @@
   <br><br><br><br><br>
   <div class="row">
     <div class="col-md-12">
-      <button class="btn btn-outline-success btn-sm" (click)="goBack()">
+      <button class="btn btn-sm btn-outline-info app" (click)="goBack()">
         <i class='fa fa-chevron-left'> </i>
         Back
       </button>
@@ -11,7 +11,7 @@
   </div>
   <div class="row">
     <img class="img-thumbnails img-fluid col-md-6" [src]="selectedData?.flag" [alt]="selectedData?.altSpellings">
-    <div class="country-details col-md-6 p-y =30px" [ngStyle]="detailStyles()">
+    <div class="country-details col-md-6  app" [ngStyle]="detailStyles()">
       <h1>{{selectedData?.name}}</h1> <br>
       <div class="row">
         <div class="col-md-6">

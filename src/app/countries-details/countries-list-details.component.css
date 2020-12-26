@@ -1,0 +1,6 @@
+:host-context(.light) .app{
+  color: var(--l-text)!important;
+}
+:host-context(.dark) .app{
+  color: var(--d-text)!important;
+}

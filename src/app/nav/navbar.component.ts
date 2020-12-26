@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Theme, ThemeService } from "../services/theme.service";
 
 @Component({
   selector: 'app-navbar',
@@ -7,15 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
   title:string = 'Where in the world?'
-  toggle: boolean = false;
+  theme: Observable<Theme>
 
-  constructor() { }
+  constructor(private themeService: ThemeService) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    this.theme = this.themeService.modes;
   }
 
-  toggleMode():void{
-    this.toggle = true
+  toggleTheme(){
+    this.themeService.toggleMode();
   }
-
 }

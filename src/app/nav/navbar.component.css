@@ -1,11 +1,18 @@
 nav{
-  background-color:  hsl(207, 26%, 17%)!important;
-  color: #ffffff!important;
   position: fixed;
   z-index: 1;
   width: 100%;
   margin-bottom: 19px!important;
 }
-strong{
-  color: #ffffff!important;
+:host-context(.light) nav{
+  background-color: var(--l-element)!important;
+}
+:host-context(.dark) nav{
+  background-color: var(--d-element)!important;
+}
+:host-context(.dark) .navbar-brand{
+  color: var(--d-text);
+}
+:host-context(.light) .navbar-brand{
+  color: var(--l-text);
 }

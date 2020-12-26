@@ -14,7 +14,7 @@
   </form>
 
   <main>
-    <div class="card" *ngFor= "let countryData of filteredCountry" [routerLink]="['/country', countryData.name]">
+    <div class="card shadow" *ngFor= "let countryData of filteredCountry" [routerLink]="['/country', countryData.name]">
       <img [src]="countryData?.flag" alt="{{countryData?.altSpellings}}" class="img-fluid" [ngStyle]="getImgStyles()">
       <div class="card-body">
         <h4 class="card-title">{{countryData?.name}}</h4>

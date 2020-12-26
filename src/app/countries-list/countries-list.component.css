@@ -9,6 +9,12 @@ main{
   width: 18rem;
   padding: 18px;
   margin: 10px 18px 18px 0;
-  background-color: hsl(207, 26%, 17%);
-  color: white;
+  /* background-color: hsl(207, 26%, 17%);
+  color: white; */
+}
+:host-context(.light) .card{
+  background-color: var(--l-bg);
+}
+:host-context(.dark) .card{
+  background-color: var(--d-bg);
 }

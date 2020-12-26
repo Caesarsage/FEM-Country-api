@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+  --white: hsl(0,0%,100%);
+
+  --d-element:hsl(209, 23%, 22%);
+  --d-bg: hsl(207, 26%, 17%);
+  --d-text: var(--white);
+
+  --l-text: hsl(200, 15%, 8%);
+  --l-input: hsl(0, 0%, 52%);
+  --l-bg: hsl(0, 0%, 98%);
+  --l-element: var(--white);
+}
+
+.shadow{
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
