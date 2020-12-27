@@ -38,9 +38,10 @@
         <div class="col-md-12" >
           <br> <br>
           <strong>Border Countries: </strong>
-          <span [hidden]="!selectedData.borders" [ngStyle]="borderStyle()">
-            <br><br>
-            {{selectedData.borders}}</span>
+          <br><br>
+          <span [ngStyle]="borderStyle()" *ngIf="selectedData?.borders">
+            {{selectedData?.borders }}
+          </span>
         </div>
       </div>
     </div>

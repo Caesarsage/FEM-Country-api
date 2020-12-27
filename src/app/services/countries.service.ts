@@ -15,7 +15,7 @@ export class CountriesService {
 
   getData():Observable<ICountriesData[]>{
     console.log('Getting all country');
-    return this.http.get<ICountriesData[]>("../../api/all.json")
+    return this.http.get<ICountriesData[]>(this.url)
       .pipe(
         tap(data => console.log('All: ' + JSON.stringify(data))),
         catchError(this.handleError)

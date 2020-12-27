@@ -60,7 +60,6 @@ export class CountriesListComponent implements OnInit{
       this.filteredCountry = this.allData.filter((count: ICountriesData) =>
       count.region.toLocaleLowerCase().indexOf(e.toLocaleLowerCase()) !== -1);
     }
-
   }
 
   toggleOption(){
