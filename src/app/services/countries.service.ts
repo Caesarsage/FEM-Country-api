@@ -3,7 +3,9 @@ import { Observable, throwError } from "rxjs";
 import { catchError, map, tap } from "rxjs/operators";
 import { HttpClient, HttpClientModule, HttpErrorResponse } from "@angular/common/http";
 import { ICountriesData} from "../shared/countries.interface";
-import from { data } "../../api/all.json"
+//import from { data } "../../api/all.json"
+import * as data from "../../api/all.json";
+
 
 @Injectable({
   providedIn: 'root'
